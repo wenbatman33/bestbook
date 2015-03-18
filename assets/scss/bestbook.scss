@@ -48,6 +48,7 @@ header{
 .indexSection{
 	position: relative;
 	width: 100%;
+	min-width: 1200px;
 	height: 420px;
 	margin: 3px 0 3px 0;
 }
@@ -95,36 +96,16 @@ header{
 	top: 36px;
 }
 .grad1 {
-    background: -webkit-linear-gradient(#e9f0f4, #d3dbde);
-    background: -o-linear-gradient(#e9f0f4, #d3dbde);
-    background: -moz-linear-gradient(#e9f0f4, #d3dbde);
-    background: linear-gradient(#e9f0f4, #d3dbde);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9f0f4', endColorstr='#d3dbde');
-    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9f0f4', endColorstr='#d3dbde');
+	@include background-gradient(#e9f0f4,#d3dbde);
 }
 .grad2 {
-    background: -webkit-linear-gradient(#f3f1e8, #dddbd3);
-    background: -o-linear-gradient(#f3f1e8, #dddbd3);
-    background: -moz-linear-gradient(#f3f1e8, #dddbd3);
-    background: linear-gradient(#f3f1e8, #dddbd3);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3f1e8', endColorstr='#dddbd3');
-    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3f1e8', endColorstr='#dddbd3');
+	@include background-gradient(#f3f1e8,#dddbd3);
 }
 .grad3 {
-    background: -webkit-linear-gradient(#f3e7eb, #ded3d7);
-    background: -o-linear-gradient(#f3e7eb, #ded3d7);
-    background: -moz-linear-gradient(#f3e7eb, #ded3d7);
-    background: linear-gradient(#f3e7eb, #ded3d7);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3e7eb', endColorstr='#ded3d7');
-    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3e7eb', endColorstr='#ded3d7');
+	@include background-gradient(#f3e7eb,#ded3d7);
 }
 .grad4 {
-    background: -webkit-linear-gradient(#eaede8, #d6d9d4);
-    background: -o-linear-gradient(#eaede8, #d6d9d4);
-    background: -moz-linear-gradient(#eaede8, #d6d9d4);
-    background: linear-gradient(#eaede8, #d6d9d4);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaede8', endColorstr='#d6d9d4');
-    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaede8', endColorstr='#d6d9d4');
+	@include background-gradient(#eaede8,#d6d9d4);
 }
 
 .indexTitle{

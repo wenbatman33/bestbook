@@ -112,6 +112,8 @@
   background-image:     -ms-linear-gradient(top, $start, $end);
   background-image:      -o-linear-gradient(top, $start, $end);
   background-image:         linear-gradient(top bottom, $start, $end);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#{$start}', endColorstr='#{$end}')
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start}', endColorstr='#{$end}')";
 }
 @mixin background-alpha-gradient ( $start, $end, $solid ) {
   background: $solid;
