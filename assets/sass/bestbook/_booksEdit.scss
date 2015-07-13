@@ -1,14 +1,16 @@
 .editBook{
 	height: auto;
-	margin: 15px 0;
+	margin: 15px 0 80px 0;
+	overflow: auto;
 	.editCover{
-		.coverBlock__top{
+		.coverBlock{
 			position: relative;
 			margin: 0 auto;
 			text-align: center;
-			.coverBlock__topInner{
+			border-right: solid 1px #e4e4e4;
+			.coverBlock__Inner{
 				position: relative;
-				width: 30%;
+				width: 80%;
 				padding: 0;
 				margin: 0 auto;
 				//-webkit-transform: scale(0.7);
@@ -35,192 +37,262 @@
 				}
 			}
 		}
-		.coverBlock__bottom{
-			text-align: center;
-			padding: 15px 0;
-			ul{
-				margin: 15px 0;
-			}
-			ul li{
-				margin: 10px 0;
-				color: #666;
-			}
-			ul li h4.title{
-				color: #2D6CA2
-			}
-		}
 	}
-
-	.editSetting{
+	.hideBg{
+		display: none;
+		padding: 0px 0 10px 0;
+		background:#f8f8f8;
+		border-top: solid 1px #e4e4e4;
+		border-bottom: solid 1px #e4e4e4;
+	}
+	.border_right{
+		border-right: solid 1px #e4e4e4;
+	}
+	.border_top{
+		border-top: solid 1px #e4e4e4;
+	}
+	.editBookInfo{
 		position: relative;
-		height: auto;
-		margin-top: 15px;
-		padding: 20px;
-		border: solid 2px #2D6CA2;
-		.t{
-			position: absolute;
-			left: -20px;
-			top: 40px;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 10px 20px 10px 0;
-			border-color: transparent #2D6CA2 transparent transparent;
-		}
-		.booksEdit__Block{
-			height: auto;
-			ul{
-			}
-			ul li{
-				margin: 10px 0;
-			}
-			p{
-				margin: 15px 0;
+		margin: 0 auto;
+		.editBookInfoBlock{
+			padding: 10px;
+			.editBookTextField{
 				width: 100%;
-				line-height: 28px;
-				span.subDec{
-					font-size: 12px;
-					color: #666;
-				}
+				margin: 5px auto;
 				label{
-					font-size: 13px;
 					display: inline-block;
-					vertical-align: middle;
-					margin-right: 5px;
+					width: 50%;
+					height: 20px;
+					font-size: 13px;
+					line-height: 20px;
 				}
-				label.inline{
-					display: block;
-					vertical-align: middle;
-					width: 200px;
-					margin: 10px 0;
+				span.prompt{
+					display: inline-block;
+					font-size: 13px;
+					width: 50%;
+					text-align: right;
+					min-height: 20px;
+					height: 20px;
+					line-height: 20px;
 				}
 				input{
 					display: inline-block;
-					vertical-align: middle;
-					width: 200px;
+					width: 100%;
+					height: 32px;
+					color: #999;
+					font-size: 13px;
+					padding: 3px;
+					border: solid 1px #ccc;
+					display: inline-block;
+					&:focus{
+						color: #000;
+					}
+				}
+				.keyword{
+					margin: 6px 0;
+					label{
+						display: inline-block;
+						width: auto;
+						height: 20px;
+						font-size: 14px;
+						line-height: 20px;
+					}
+					input.keyword{
+						display: inline-block;
+						width: 100px;
+						height: 32px;
+						margin-right: 6px;
+					}
 				}
 				textarea{
-					text-align: left;
 					width: 100%;
-					height: 150px;
+					color: #999;
+					font-size: 13px;
+					padding: 3px;
+					background: #fff;
+					border: solid 1px #ccc;
+					&:focus{
+						color: #000;
+					}
 				}
-			}
-			span.tag{
-				width: auto;
-			}
-			.date-input-container {
-				width: 180px;
-				display: inline-block;
-				border-bottom: 1px dashed #C9C9C9;
-				&:focus,&:hover{
+				select{
+					background: #fff;
+					width: 100%;
+					height: 32px;
+					line-height:32px;
 					color: #000;
-					border-bottom:  1px dashed #666;
+					font-size: 13px;
+					padding: 3px;
+					display: inline-block;
+					border: solid 1px #ccc;
+					appearance: menulist-button;
+					-o-appearance: menulist-button;
+					-webkit-appearance: menulist-button;
 				}
 			}
-			.icon_14_Error{
-				margin-right: 3px;
+		}
+		.editCategory{
+			padding: 0;
+			margin: 5px 0;
+			.tag{
+				margin: 10px 0;
+			}
+			#moreBooksEdit{
+				margin: 10px 0;
+			}
+		}
+	}
+	.editSellSetting{
+		position: relative;
+		height: auto;
+		padding: 20px;
+		border: solid 2px #F2254C;
+		margin-top: 0px;
+		.editSellSettingBlock{
+			padding: 20px 0;
+			span.icon_14_tips{
 				display: inline-block;
-				text-align: center;
-				line-height: 16px;
-				font-size: 12px;
+				margin-right: 5px;
 				vertical-align: middle;
-				background:#F2254C;
-				color: #fff;
-				width: 14px;
-				height: 14px;
-				border-radius: 99em;
+				@include cssSprite($icon_14_tips);
 			}
-			.tipsError{
-				font-size: 12px;
-				color: #F2254C;
+			select.currency{
+				background: #fff;
+				width: 100px;
+				height: 32px;
+				line-height:32px;
+				color: #000;
+				font-size: 13px;
+				padding: 3px;
+				display: inline-block;
+				border: solid 1px #ccc;
+				appearance: menulist-button;
+				-o-appearance: menulist-button;
+				-webkit-appearance: menulist-button;
 			}
-			.error{
-				color: #F2254C;
-				border-bottom: 1px dashed #F2254C;
+			input.bookPrice{
+				width: 150px;
+				height: 32px;
+				color: #000;
+				font-size: 16px;
 			}
-			.date-input-container input {
-				border: 0;
-				outline: 0;
+
+		}
+	}
+	.bookConvert{
+		position: relative;
+		height: auto;
+		padding: 20px 0;
+		border-top: solid 1px #e4e4e4;
+		border-bottom: solid 1px #e4e4e4;
+		.convertBtn{
+			width: 100%;
+			display: inline-block;
+			color: #c2e3ef;
+			border: solid 1px #c2e3ef;
+			padding: 5px;
+		}
+		.bookConvertInner{
+			min-height: 30px;
+			padding:  0;
+			line-height: 40px;
+			.progressBars{
+				position: relative;
+				display: inline-block;
+				background: #e4e4e4;
+				border: solid 2px #e4e4e4;
+				border-radius: 8px;
+				width: 98%;
+				height: 16px;
+				margin: 15px 0 5px 0;
+				span{
+					position: absolute;
+					display: inline-block;
+					background:#c2e3ef;
+					border-radius: 8px;
+					width: 100%;
+					height: 12px;
+				}
+			}
+			.convertStatus{
+				width: 100%;
 				text-align: center;
-				width: 27px;
-			}
-			.date-input-container input.day, .date-input-container input.month {
-				margin-right: 0px;
-			}
-			.date-input-container input.year {
-				width: 40px;
-			}
-			.separator{
-				color: #999;
+				color:#c2e3ef;
 			}
 		}
-		.booksEdit__bottomBlock{
-			margin-top: 20px;
-			padding-top: 20px;
-			text-align: left;
-			border-top: solid 1px #e4e4e4;
-
+	}
+	.convertSuccess{
+		.convertBtn{
+			background:#009DD9;
+			color: #fff;
+			border: solid 1px #009DD9;
+		}
+		.bookConvertInner{
+			.progressBars{
+				span{
+					background:#009DD9;
+				}
+			}
+			.convertStatus{
+				width: 100%;
+				text-align: center;
+				color:#009DD9;
+			}
 		}
 	}
-}
-@include setMediaQueries(pc){
-	.editBook .coverBlock__bottom{
-		padding-top: 15px;
-		text-align: center;
-	}
-	.editBook .editCover .coverBlock__top .coverBlock__topInner{
-		position: relative;
-		width: 100%;
-		padding: 0;
-		//-webkit-transform: scale(0.7);
-	}
-}
-@include setMediaQueries(pad_h){
-	.editBook .editCover .coverBlock__top .coverBlock__topInner{
-		position: relative;
-		width: 100%;
-		padding: 0;
-		//-webkit-transform: scale(0.7);
-	}
-	.editSetting {
-		.t{
-
+	.convertFail{
+		.convertBtn{
+			background:#FB6E52;
+			color: #fff;
+			border: solid 1px #FB6E52;
+		}
+		.bookConvertInner{
+			.progressBars{
+				span{
+					background:#FB6E52;
+				}
+			}
+			.convertStatus{
+				text-align: center;
+				color:#FB6E52;
+			}
 		}
 	}
 }
 
 @include setMediaQueries(pad_v){
-	.editBook .coverBlock__bottom{
-		text-align: center;
-	}
-	.editBook .editCover .coverBlock__top .coverBlock__topInner{
-		position: relative;
-		width: 30%;
-		padding: 0;
-		//-webkit-transform: scale(0.7);
-	}
-	.editSetting {
-		.t{
-			display: none;
+	.editBook .editCover{
+		.coverBlock{
+			border-right: none;
 		}
+	}
+	.editBook .border_right{
+		border-right: none;
+	}
+	.editBook .editCover .coverBlock .coverBlock__Inner{
+		width: 25%;
+	}
+	.editBook .bookConvert{
+		padding: 5px 0;
 	}
 }
 @include setMediaQueries(phone){
-	.editBook .coverBlock__bottom{
-		text-align: center;
-	}
-	.editBook .editCover .coverBlock__top .coverBlock__topInner{
-		position: relative;
-		width: 30%;
-		padding: 0;
-		//-webkit-transform: scale(0.7);
-	}
-	.editSetting {
-		.t{
-			display: none;
+	.editBook .editCover{
+		.coverBlock{
+			border-right: none;
 		}
 	}
+	.editBook .border_right{
+		border-right: none;
+	}
+	.editBook .editCover .coverBlock .coverBlock__Inner{
+		width: 25%;
+	}
+	.editBook .bookConvert{
+		padding: 5px 0;
+	}
 }
+
 
 /* Overlay style */
 .overlay {
@@ -326,8 +398,7 @@
 	background: rgba(255,255,255,1);
 	z-index: 99;
 	text-align: center;
-	padding: 50px;
-	overflow: auto;
+	overflow: hidden;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	-webkit-overflow-scrolling: touch;
@@ -342,7 +413,7 @@
 	-webkit-transition-duration: 0.4s;
 	-moz-transition-duration: 0.4s;
 	transition-duration: 0.4;
-	.SelectListBtns{
+	.SelectTitle{
 		position: fixed;
 		right: 0;
 	  	top: 0;
@@ -351,10 +422,12 @@
 		text-align: right;
 		background:#fff;
 		padding: 10px 60px;
+		z-index: 30;
 		border-bottom: solid 1px #e4e4e4;
 		.tit{
 			display: inline-block;
 			float: left;
+			line-height: 60px;
 			text-align: left;
 		}
 		.btns{
@@ -363,18 +436,24 @@
 		}
 	}
 	.pics{
+		position: relative;
 		display: inline-block;
 		width: 100%;
-		margin-top: 60px;
-		height: auto;
+		height: 100%;
+		padding: 100px 50px;
+		height: 100%;
+		overflow: auto;
+		@include box-sizing(border-box);
 	}
 	.picItem{
 	  	display: inline-block;
 	  	vertical-align: top;
 	  	text-align: left;
 	  	margin: 10px 0;
-	  	h3{
+	  	padding: 0 10px;
+	  	h3,h4{
 	  		color:#000;
+	  		line-height: 36px;
 	  		border-bottom: solid 1px #e4e4e4;
 	  	}
 	  	ul{
@@ -395,6 +474,19 @@
 		  		}
 	  		}
 	  	}
+  	}
+  	.confirmBlock{
+  		position: fixed;
+		width: 100%;
+		bottom: 0px;
+		height: 90px;
+		border-top: solid 1px #e4e4e4;
+		background: #FFF;
+		z-index: 50;
+		padding: 10px 60px;
+		.confirmBlockInner{
+			text-align: right;
+		}
   	}
   	.form-group{
   		position: fixed;
@@ -418,7 +510,14 @@
 }
 
 @include setMediaQueries(phone){
-	.SelectListBtns{
+	.SelectList-inner .SelectTitle{
 		padding: 10px 10px !important;
+	}
+	.SelectList-inner .pics{
+		padding: 100px 10px;
+
+	}
+	.SelectList-inner .confirmBlock{
+		padding: 10px 10px;
 	}
 }

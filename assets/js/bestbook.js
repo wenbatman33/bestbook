@@ -1,7 +1,6 @@
 $(function() {
 	$('#moreBooksEdit').click(function() {
-		$('.booksEdit__Block:first-child').addClass('borderRight');
-		$('.is-hide').removeClass("is-hide");
+		$(".hideBg").show();
 		$(this).hide();
 	});
 
@@ -34,11 +33,11 @@ $(function() {
 		}
 	});
 	/////
-	$('.SelectListBtns .cancel').on('click', function(){
+	$('.confirmBlock .cancel').on('click', function(){
 		$('body').css({overflow: 'auto'});
 		$('.SelectList-inner').removeClass('is-visible');
 	});
-	$('.SelectListBtns .send').on('click', function(){
+	$('.confirmBlock .send').on('click', function(){
 		$('body').css({overflow: 'auto'});
 		$('.SelectList-inner').removeClass('is-visible');
 	});

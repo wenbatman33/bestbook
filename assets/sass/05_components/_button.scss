@@ -63,6 +63,18 @@
   border: solid 1px #999;
   color: #666;
 }
+
+.cubetag{
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #4277A8;
+    text-align: center;
+    border: solid 1px #4277A8;
+    padding: 0px 10px;
+}
 $selling: #55BCA2;
 $unSell: #c2e3ef;
 $unPublish: #009DD9;
@@ -129,12 +141,30 @@ $btnTypes:(
 	}
 }
 
-
+//確認按鈕群組
+.editConfirm{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 60px;
+    border-top: solid 1px #e4e4e4;
+    background: #FFF;
+    z-index: 50;
+    .container{
+        margin: 0 auto;
+    }
+    .editConfirmblock{
+        padding: 10px 0;
+        text-align: right;
+    }
+}
 
 
 .setBtn{
 	display: inline-block;
 	background-color: #F2254C;
+    border: solid 1px #F2254C;
+    margin: 2px;
 	color: #fff;
 	font-weight: 400;
     line-height: 1.8;
