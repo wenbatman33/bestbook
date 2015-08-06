@@ -1,308 +1,205 @@
 .booksItem{
-	width: 100%;
-	margin: 10px 0;
-	overflow: hidden;
-	border-bottom: solid 1px #e4e4e4;
-	.booksInfo{
-		position: relative;
-		height: 100%;
-		min-height: 130px;
-		padding: 0;
-		.cover{
-			position: absolute;
-			float: left;
-			width: 84px;
-			background-color: #fff;
-			margin: 5px;
-			height: 115px;
-			border: solid 1px #e4e4e4;
-			z-index: 2;
-			& img{
-				max-width:100%;
-				height:auto;
-			}
-		}
-		.info{
-			margin-left: 100px;
-			.status{
-				color: #A8B1BB;
-			}
-			.name{
-				overflow:hidden;
-				width: 90%;
-				text-overflow : ellipsis;
-  				white-space : nowrap;
-				a{
-					color: #333;
-					font-size: 16px;
-					line-height: 30px;
-					font-weight: bold;
-				}
-				p{
-					font-size: 16px;
-					line-height: 20px;
-				}
-			}
-			.infoBtns{
-				margin-top: 8px;
-				.infoBtn{
-					margin-right: 5px;
-				}
-			}
-		}
-	}
-	.functions_pc{
-		position: relative;
-		height: 130px;
-		text-align: left;
-		padding: 0;
-		.preview,.setting{
-			position: relative;
-			display: inline-block;
-			vertical-align: middle;
-			margin-top: 40px;
-			height: 40px;
-			width: 130px;
-			line-height: 30px;
-		}
-		.settingDec{
-			width: 130px;
-			height: 40px;
-			font-size: 12px;
-			line-height: 14px;
-			margin: 10px 0px;
-			color: #A8B1BB;
-			br{
-				line-height: 12px;
-			}
-		}
-		.fnc{
-			position: absolute;
-			top: 0;
-			right: 0;
-			padding: 0;
-			width: 30px;
-			height: 100%;
-			overflow: hidden;
-			font-size: 12px;
-			span{
-				font-size: 12px;
-			}
-
-			.export{
-				border-bottom: solid 1px #e4e4e4;
-			}
-			.export , .delete{
-				width: 100%;
-				height: 65px;
-				color: #A8B1BB;
-				cursor: pointer;
-				text-align: center;
-				.icon_22_export{
-					display: inline-block;
-					margin-top: 8px;
-					@include cssSprite($icon_22_export);
-				}
-				.icon_22_delete{
-					display: inline-block;
-					margin-top: 8px;
-					@include cssSprite($icon_22_delete);
-
-				}
-				.icon_22_unsale{
-					display: inline-block;
-					margin-top: 8px;
-					@include cssSprite($icon_22_unsale);
-
-				}
-				&:hover{
-					background: #f8f8f8;
-				}
-				span{
-					text-align: center;
-				}
-				.dec{
-					line-height: 30px;
-				}
-			}
-		}
-	}
+    width: 100%;
+    margin: 10px 0;
+    overflow: hidden;
+    border-bottom: solid 1px #e4e4e4;
+    .booksInfo{
+        position: relative;
+        height: 100%;
+        min-height: 140px;
+        padding: 0;
+        .cover{
+            position: absolute;
+            float: left;
+            width: 84px;
+            background-color: #fff;
+            margin: 5px;
+            height: 115px;
+            z-index: 2;
+            & img{
+                max-width:100%;
+                height:auto;
+            }
+        }
+        .info{
+            margin-left: 100px;
+            .status{
+                color: #A8B1BB;
+            }
+            .name{
+                overflow:hidden;
+                width: 96%;
+                height: 58px;
+                // text-overflow : ellipsis;
+                // white-space : nowrap;
+                a{
+                    color: #333;
+                    font-size: 18px;
+                    line-height: 30px;
+                    font-weight: bold;
+                    text-decoration: underline;
+                }
+            }
+            .p{
+                font-size: 16px;
+                line-height: 20px;
+            }
+            .infoBtns{
+                color: #ccc;
+                margin-top: 10px;
+                padding: 0;
+                .infoBtn{
+                    margin-right: 5px;
+                }
+            }
+            .uploadStatus_1{
+                p{
+                    margin-top: 0px;
+                }
+                display: inline-block;
+                width: 28%;
+            }
+            .uploadStatus_2{
+                p{
+                    margin-top: 0px;
+                    a{
+                        margin-top: 24px;
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+                display: inline-block;
+                width: 70%;
+            }
+        }
+    }
+    .booksetting{
+        position: relative;
+        height: 100%;
+        min-height: 140px;
+        padding: 0 15px;
+        .info{
+        }
+        .price{
+            color: #000;
+            height: 58px;
+            font-size: 26px;
+            a{
+                color: #000;
+            }
+        }
+        .p{
+            height: 20px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .infoBtns{
+            color: #ccc;
+            margin-top: 10px;
+            padding: 0;
+            .infoBtn, .btn{
+                margin-right: 5px;
+            }
+        }
+    }
 }
+.bookselling .booksetting .price {
+    color: #F2254C;
+    font-size: 26px;
+    a{
+        color: #F2254C;
+    }
+}
+// unSell: (class:'unSell',color:#dddddd, bg:##e7e7e7)
 $booksListStatus:(
-	selling:(class:'selling',color:#55BCA2, bg:#8ACFBE),
-	unPublish:(class:'unPublish',color:#009DD9, bg:#7DAED8),
-	unSell: (class:'unSell',color:#dddddd, bg:#e7e7e7),
-	fail: (class:'fail',color:#FB6E52, bg:#FB9A89),
-	uplod:(class:'uplod',color:#c2e3ef, bg:#D5EBF3)
+    selling:(class:'selling',color:#55BCA2, bg:#8ACFBE),
+    unPublish:(class:'unPublish',color:#009DD9, bg:#7DAED8),
+    unSell: (class:'unSell',color:#009DD9, bg:#7DAED8),
+    fail: (class:'fail',color:#FB6E52, bg:#FB9A89),
+    uplod:(class:'uplod',color:#c2e3ef, bg:#D5EBF3)
 );
 @each $name, $value  in $booksListStatus{
-	$class: map-get($value, class);
-	$color: map-get($value, color);
-	$bg: map-get($value, bg);
-	.book#{$name}{
-		.status .c{
-			color:$color;
-			a{
-				color:$color;
-			}
-		}
-		.name {
-			a{
-				color:$color;
-			}
-			p{
-				color: $color;
-			}
-		}
-	 	.functions_pc{
-			.setting{
-				background: $color;
-				color:#fff;
-				border: none;
-				&:hover{
-					background: $bg;
-				}
-			}
-		}
-		.infoBtn {
-			display: inline-block;
-			color: $color;
-			border: solid 1px $color;
-			padding: 5px;
-			&:hover{
-				background: $color;
-				color: #fff;
-			}
-		}
-	}
+    $class: map-get($value, class);
+    $color: map-get($value, color);
+    $bg: map-get($value, bg);
+    .book#{$name}{
+        .status .c{
+            color:$color;
+            a{
+                color:$color;
+            }
+        }
+        .name {
+            a{
+                color:$color;
+            }
+        }
+        .p{
+            color: $color;
+            a{
+                color: $color;
+            }
+        }
+        .infoBtns{
+            .uploadStatus_1,.uploadStatus_2{
+                p{
+                    color: $color !important;
+                    a{
+                        color: $color !important;
+                    }
+                }
+            }
+        }
+        .infoBtn {
+            display: inline-block;
+            color: $color;
+            border: solid 1px $color;
+            padding: 5px;
+            &:hover{
+                background: $color;
+                color: #fff;
+            }
+        }
+        .booksetting{
+            .p{
+                color: $color;
+                a{
+                    color: $color;
+                }
+            }
+            .infoBtns {
+                .settingBtn{
+                    color: #fff;
+                    background: $color;;
+                    border: solid 1px $color;
+                    &:hover{
+                        color: #fff;
+                        background: $bg;
+                        border: solid 1px $bg;
+                    }
+                }
+            }
+
+        }
+    }
 }
-
 @include setMediaQueries(pc){
-
 }
 @include setMediaQueries(pad_v){
-	.booksItem .functions_pc{
-		height: auto;
-		.setting{
-			margin: 20px auto 5px auto;
-			width: 100%;
-		}
-	}
-	.booksItem .functions_pc{
-		.fnc{
-			position: absolute;
-			top: 60px;
-			bottom: 0;
-			right: 0;
-			width: 150px;
-			height: 60px;
-			.export{
-				display: inline-block;
-				width: 50px;
-				.dec{
-					display: inline-block;
-					margin-top: 8px;
-				}
-			}
-			.export , .delete{
-				display: inline-block;
-				width: 70px;
-				height: 65px;
-				color: #A8B1BB;
-				cursor: pointer;
-				text-align: center;
-				.icon_22_export,.icon_22_delete,.icon_22_unsale{
-					margin-right: 6px;
-				}
-				.dec{
-					display: inline-block;
-					margin-top: 8px;
-				}
-			}
-		}
-	}
 }
 @include setMediaQueries(pad_h){
-	.booksItem .functions_pc{
-		height: auto;
-		.setting{
-			margin: 20px auto 5px auto;
-			width: 100%;
-		}
-	}
-	.booksItem .functions_pc{
-		.fnc{
-			position: absolute;
-			top: 60px;
-			bottom: 0;
-			right: 0;
-			width: 150px;
-			height: 60px;
-			.export{
-				display: inline-block;
-				width: 50px;
-				.dec{
-					display: inline-block;
-					margin-top: 8px;
-				}
-			}
-			.export , .delete{
-				display: inline-block;
-				width: 70px;
-				height: 65px;
-				color: #A8B1BB;
-				cursor: pointer;
-				text-align: center;
-				.icon_22_export,.icon_22_delete,.icon_22_unsale{
-					margin-right: 6px;
-				}
-				.dec{
-					display: inline-block;
-					margin-top: 8px;
-				}
-			}
-		}
-	}
+    .booksItem .booksetting{
+        padding: 0 5px;
+    }
+    .booksItem .booksetting .price {
+        height: auto;
+    }
 }
 @include setMediaQueries(phone){
-	.booksItem .functions_pc{
-		height: auto;
-		.setting{
-			margin: 20px auto 5px auto;
-			width: 100%;
-		}
-	}
-	.booksItem .functions_pc{
-		.fnc{
-			position: absolute;
-			top: 60px;
-			bottom: 0;
-			right: 0;
-			width: 150px;
-			height: 60px;
-			.export{
-				display: inline-block;
-				width: 50px;
-				.dec{
-					display: inline-block;
-					margin-top: 8px;
-				}
-			}
-			.export , .delete{
-				display: inline-block;
-				width: 70px;
-				height: 65px;
-				color: #A8B1BB;
-				cursor: pointer;
-				text-align: center;
-				.icon_22_export,.icon_22_delete,.icon_22_unsale{
-					margin-right: 6px;
-				}
-				.dec{
-					display: inline-block;
-					margin-top: 8px;
-				}
-			}
-		}
-	}
+    .booksItem .booksetting{
+        padding: 0 5px;
+    }
+    .booksItem .booksetting .price {
+        height: auto;
+    }
 }

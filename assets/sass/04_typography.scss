@@ -50,12 +50,22 @@ br{
 	line-height:22px;
 }
 .ta_right{
-	text-align: right;
+	text-align: right !important;
 }
 .ta_left{
-	text-align: left;
+	text-align: left !important;
 }
 .ta_center{
+	text-align: center !important;
+}
+
+.table_right{
+	text-align: right;
+}
+.table_left{
+	text-align: left;
+}
+.table_center{
 	text-align: center;
 }
 .cololr_green{
@@ -75,6 +85,9 @@ br{
 }
 .cololr_gray9{
 	color: #999;
+}
+.cololr_black{
+	color: #000;
 }
 
 .cololr_red{
