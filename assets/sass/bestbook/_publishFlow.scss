@@ -1,4 +1,4 @@
-.faq{
+.publishFlow{
 	height: auto;
 	margin: 15px 0 80px 0;
 	overflow: auto;
@@ -7,7 +7,7 @@
 		line-height: 40px;
 		border-bottom: solid 1px #e4e4e4;
 	}
-	.faq_list{
+	.pf_list{
 		ul{
 			li{
 				display: block;
@@ -95,16 +95,9 @@
 	}
 
 	//////////////////////////////////////////////////////////////////////////////
-	.faq_contents{
-		p.info{
-			padding-bottom: 40px;
-			border-bottom: solid 1px #e4e4e4;
-		}
-		a{
-			color:#009DD9;
-		}
+	.pf_contents{
 		.backTop{
-			padding-top: 60px;
+			padding-top: 20px;
 			a{
 				font-size: 12px;
 				text-decoration: underline;
@@ -141,21 +134,17 @@
 						border-bottom: none;
 					}
 				}
-				.alert{
+				.action{
 					padding: 10px;
 					margin: 10px 0;
 					background: #ffffdd;
 				}
-				.action{
+				.alert{
 					padding: 10px;
 					margin: 10px 0;
 					background: #f8f8f8;
-					p{
-						font-size: 16px;
-						color: #2D6CA2;
-					}
 				}
-				.faqImg{
+				.pfImg{
 					width: 100%;
 					margin: 15px 0;
 					border: solid 1px #e4e4e4;
