@@ -94,16 +94,16 @@
 				}
 			}
 			.hoverBtn{
-				width: 240px;
-				height: 60px;
-				line-height: 60px;
-				background-color:#5d9ccf;
+				width: 360px;
+				height: 100px;
+				background-color:#ef2e53;
 				color: #fff;
-				font-size: 18px;
+				font-size: 22px;
 				border-radius: 8px;
 				cursor: pointer;
+				padding-top: 26px;
 				&:hover{
-					background-color:#ef2e53;
+					background-color:#5d9ccf;
 				}
 			}
 			p{
