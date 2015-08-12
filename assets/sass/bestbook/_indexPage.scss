@@ -98,12 +98,15 @@
 				height: 100px;
 				background-color:#ef2e53;
 				color: #fff;
-				font-size: 22px;
+				font-size: 24px;
 				border-radius: 8px;
 				cursor: pointer;
 				padding-top: 26px;
 				&:hover{
 					background-color:#5d9ccf;
+				}
+				small{
+					font-size: 13px;
 				}
 			}
 			p{
